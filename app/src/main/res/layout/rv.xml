@@ -1,26 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="1dp">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@mipmap/pic"
-        android:id="@+id/img"/>
-    <TextView
+        android:src="@mipmap/pic" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abv"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:id="@+id/tvName"/>
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="100dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3.4"
+        android:textAlignment="center" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="150dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="70dp"
+        android:inputType="number"
+        android:text="15000.0"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
